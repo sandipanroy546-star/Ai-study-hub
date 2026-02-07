@@ -13,25 +13,33 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="./src/style.css">
 </head>
 
 <body class="dark-theme">
     <header class="navbar">
         <div class="container navbar-container">
             <div class="logo">
-                <a href="/" class="logo-text">AI Study Hub</a>
+                <a href="./index.html" class="logo-text">AI Study Hub</a>
             </div>
             <nav class="nav-links">
-                <a href="/index.html#home">Home</a>
-                <a href="/index.html#basics">AI Basics</a>
-                <a href="/index.html#ml" class="active">Machine Learning</a>
-                <a href="/index.html#dl">Deep Learning</a>
-                <a href="/index.html#nlp">NLP</a>
-                <a href="/index.html#roadmap">Roadmaps</a>
+                <a href="./index.html#home">Home</a>
+                <a href="./index.html#basics">AI Basics</a>
+                <div class="dropdown">
+                    <span class="dropdown-trigger">Topics <i data-lucide="chevron-down"
+                            style="width: 14px; height: 14px; display: inline; vertical-align: middle;"></i></span>
+                    <div class="dropdown-menu">
+                        <a href="./ml-detail.html" class="dropdown-item"><i data-lucide="settings"></i> Machine
+                            Learning</a>
+                        <a href="./dl-detail.html" class="dropdown-item"><i data-lucide="layers"></i> Deep Learning</a>
+                        <a href="./nlp-detail.html" class="dropdown-item"><i data-lucide="message-square"></i> NLP</a>
+                        <a href="./cv-detail.html" class="dropdown-item"><i data-lucide="eye"></i> Computer Vision</a>
+                    </div>
+                </div>
+                <a href="./index.html#roadmap">Roadmaps</a>
             </nav>
             <div class="nav-actions">
-                <a href="/index.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 14px;">Back to
+                <a href="./index.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 14px;">Back to
                     Home</a>
             </div>
         </div>
@@ -39,154 +47,117 @@
 
     <main class="section">
         <div class="container">
-            <div class="detail-header">
+            <nav class="breadcrumbs">
+                <a href="./index.html">Home</a>
+                <i data-lucide="chevron-right"></i>
+                <a href="./index.html#fields">Topics</a>
+                <i data-lucide="chevron-right"></i>
+                <span>Machine Learning</span>
+            </nav>
+
+            <div class="detail-header" data-reveal>
                 <span class="badge">Masterclass</span>
                 <h1>Machine Learning <span class="gradient-text">Fundamentals</span></h1>
-                <p class="lead">A comprehensive guide to understanding how machines learn from data.</p>
+                <p class="lead">A comprehensive guide to understanding how machines learn from data and improve
+                    intelligence over time.</p>
             </div>
 
             <div class="detail-content">
-                <!-- What is ML -->
-                <div class="info-group">
-                    <h2>What is Machine Learning?</h2>
-                    <ul class="detail-list">
+                <!-- 1. Introduction -->
+                <div class="info-group" data-reveal>
+                    <h2>1. Introduction</h2>
+                    <p>Machine Learning (ML) is a branch of artificial intelligence (AI) and computer science which
+                        focuses on the use of data and algorithms to imitate the way that humans learn, gradually
+                        improving its accuracy.</p>
+                    <ul class="detail-list" style="margin-top: var(--space-2);">
                         <li><i data-lucide="check-circle"></i> Subset of Artificial Intelligence</li>
-                        <li><i data-lucide="check-circle"></i> Enables systems to learn from data without explicit
-                            programming</li>
-                        <li><i data-lucide="check-circle"></i> Improves performance automatically with experience</li>
-                        <li><i data-lucide="check-circle"></i> Uses algorithms to identify patterns and make predictions
+                        <li><i data-lucide="check-circle"></i> Enables systems to learn without explicit programming
                         </li>
+                        <li><i data-lucide="check-circle"></i> Uses statistical methods to find patterns</li>
                     </ul>
                 </div>
 
-                <!-- Types of ML -->
-                <div class="info-group">
-                    <h2>Types of Machine Learning</h2>
-                    <div class="cards-grid">
-                        <div class="card mini-card">
-                            <h3>Supervised</h3>
-                            <p>Learns from labeled data with clear input-output pairs.</p>
-                        </div>
-                        <div class="card mini-card">
-                            <h3>Unsupervised</h3>
-                            <p>Finds hidden patterns in data without pre-existing labels.</p>
-                        </div>
-                        <div class="card mini-card">
-                            <h3>Reinforcement</h3>
-                            <p>Learning through rewards and penalties in an environment.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Deep Dive Sections -->
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>Supervised Learning</h3>
-                        <ul class="detail-list">
-                            <li>Uses labeled datasets</li>
-                            <li>Learns input–output relationships</li>
-                            <li>Suitable for prediction and classification tasks</li>
-                            <li>Common algorithms: Linear Regression, Decision Trees</li>
-                        </ul>
-                    </div>
-                    <div class="info-card">
-                        <h3>Unsupervised Learning</h3>
-                        <ul class="detail-list">
-                            <li>Works with unlabeled data</li>
-                            <li>Identifies hidden patterns or groupings</li>
-                            <li>Used for clustering and association analysis</li>
-                            <li>Common algorithms: K-Means, DBSCAN</li>
-                        </ul>
-                    </div>
-                    <div class="info-card">
-                        <h3>Reinforcement Learning</h3>
-                        <ul class="detail-list">
-                            <li>Interaction with an environment</li>
-                            <li>Uses rewards and penalties</li>
-                            <li>Agent improves decisions over time</li>
-                            <li>Used in robotics and game AI</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Core Concepts -->
-                <div class="info-group">
-                    <h2>Core Concepts & Training</h2>
+                <!-- 2. Key Concepts -->
+                <div class="info-group" data-reveal>
+                    <h2>2. Key Concepts</h2>
                     <div class="concepts-grid">
                         <div class="card">
-                            <h4>Data Split</h4>
-                            <p><strong>Training Data:</strong> Used to build the model.</p>
-                            <p><strong>Testing Data:</strong> Used to evaluate performance and ensure generalization.
+                            <h4>Supervised Learning</h4>
+                            <p>Learning from labeled data (e.g., predicting house prices based on size and location).
                             </p>
                         </div>
                         <div class="card">
-                            <h4>Bias & Variance</h4>
-                            <p><strong>Bias:</strong> Error from wrong assumptions.</p>
-                            <p><strong>Variance:</strong> Sensitivity to training data fluctuations.</p>
+                            <h4>Unsupervised Learning</h4>
+                            <p>Finding patterns in unlabeled data (e.g., grouping customers into segments based on
+                                behavior).</p>
                         </div>
                         <div class="card">
-                            <h4>Model Fit</h4>
-                            <p><strong>Overfitting:</strong> Learning noise too well, poor on new data.</p>
-                            <p><strong>Underfitting:</strong> Failing to learn patterns even on training data.</p>
+                            <h4>Reinforcement Learning</h4>
+                            <p>Learning through trial and error (e.g., training a robot to navigate a maze using
+                                rewards).</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card" style="margin-top: var(--space-4);">
+                        <h3>The Training Process</h3>
+                        <p>Models are built by splitting data into <strong>Training</strong> (to learn) and
+                            <strong>Testing</strong> (to verify). Overfitting occurs when a model learns noise too well,
+                            while underfitting happens when it's too simple.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Real-World Examples -->
+                <div class="info-group" data-reveal>
+                    <h2>3. Real-World Examples</h2>
+                    <div class="info-grid">
+                        <div class="example-box">
+                            <h5>Netflix Recommendations</h5>
+                            <p>ML algorithms analyze your viewing history and compare it with millions of other users to
+                                predict what you'll enjoy next.</p>
+                        </div>
+                        <div class="example-box">
+                            <h5>Spam Filtering</h5>
+                            <p>Your email provider uses classification algorithms to identify patterns in subject lines
+                                and sender addresses to block spam.</p>
+                        </div>
+                        <div class="example-box">
+                            <h5>Price Forecasting</h5>
+                            <p>Airlines and hotels use regression models to adjust prices dynamically based on demand,
+                                season, and timing.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Algorithms and Tasks -->
-                <div class="info-group">
-                    <h2>Algorithm Types & Tasks</h2>
+                <!-- 4. Industry Applications -->
+                <div class="info-group" data-reveal>
+                    <h2>4. Industry Applications</h2>
                     <div class="info-grid">
                         <div class="info-card">
-                            <h4>Task Types</h4>
-                            <p><strong>Regression:</strong> Predicts continuous values (e.g., price forecasting).</p>
-                            <p><strong>Classification:</strong> Predicts categorical outputs (e.g., spam detection).</p>
-                            <p><strong>Clustering:</strong> Groups similar data points without labels.</p>
+                            <i data-lucide="heart" style="color: var(--accent); margin-bottom: 8px;"></i>
+                            <h4>Healthcare</h4>
+                            <p>Predicting disease outbreaks and assist in medical imaging diagnosis.</p>
                         </div>
                         <div class="info-card">
-                            <h4>Evaluation Metrics</h4>
-                            <p><strong>Accuracy:</strong> Overall correctness.</p>
-                            <p><strong>Precision & Recall:</strong> Granular quality metrics.</p>
-                            <p><strong>F1-Score:</strong> Harmonic mean of precision and recall.</p>
+                            <i data-lucide="landmark" style="color: var(--accent); margin-bottom: 8px;"></i>
+                            <h4>Finance</h4>
+                            <p>Detecting fraudulent transactions and automating algorithmic trading.</p>
+                        </div>
+                        <div class="info-card">
+                            <i data-lucide="shopping-cart" style="color: var(--accent); margin-bottom: 8px;"></i>
+                            <h4>E-commerce</h4>
+                            <p>Personalized shopping experiences and supply chain optimization.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Preprocessing & Tuning -->
-                <div class="info-group">
-                    <h2>Data Preparation & Optimization</h2>
-                    <div class="info-card">
-                        <ul class="detail-list">
-                            <li><strong>Data Preprocessing:</strong> Handling missing values, scaling features, and
-                                encoding categorical data.</li>
-                            <li><strong>Feature Engineering:</strong> Selecting and transforming variables to reduce
-                                noise and improve accuracy.</li>
-                            <li><strong>Hyperparameter Tuning:</strong> Optimizing parameters (Grid/Random Search)
-                                before training.</li>
-                            <li><strong>Cross Validation:</strong> Dividing data into folds to ensure reliability and
-                                reduce overfitting.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Applications & Scope -->
-                <div class="info-group">
-                    <h2>The Bigger Picture</h2>
-                    <div class="info-grid">
-                        <div class="info-card">
-                            <h3>Common Algorithms</h3>
-                            <p>Linear Regression, Logistic Regression, Decision Tree, Random Forest, SVM, K-Nearest
-                                Neighbors.</p>
-                        </div>
-                        <div class="info-card">
-                            <h3>Real-world Applications</h3>
-                            <p>Recommender systems, Fraud detection, Speech recognition, Image classification,
-                                Predictive analytics.</p>
-                        </div>
-                    </div>
-                    <div class="info-card" style="margin-top: 2rem; border-color: var(--accent);">
-                        <h3>Future Scope</h3>
-                        <p>ML is essential for modern data-driven applications, seeing high demand across every industry
-                            from automation to intelligent systems.</p>
+                <!-- 5. Next Steps -->
+                <div class="next-steps" data-reveal>
+                    <h2>Ready to build your first model?</h2>
+                    <p>Start with Python and libraries like Scikit-Learn to master the basics of data science.</p>
+                    <div style="display: flex; gap: var(--space-2); justify-content: center;">
+                        <a href="./index.html#roadmap" class="btn btn-primary">View Full Roadmap</a>
+                        <a href="#" class="btn btn-outline">Free Exercises</a>
                     </div>
                 </div>
 
@@ -197,12 +168,13 @@
     <footer class="footer">
         <div class="container footer-bottom">
             <p>Developed by Sandipan Roy</p>
+            <p><a href="mailto:sandipanroy546@gmail.com" class="text-secondary">sandipanroy546@gmail.com</a></p>
             <p class="copyright">&copy; 2026 AI Study Hub. All rights reserved.</p>
         </div>
     </footer>
 
     <script type="module">
-        import '/src/main.js';
+        import './src/main.js';
         lucide.createIcons();
     </script>
 </body>

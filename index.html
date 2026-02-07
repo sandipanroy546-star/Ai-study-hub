@@ -14,6 +14,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css">
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -27,9 +28,16 @@
       <nav class="nav-links">
         <a href="#home" class="active">Home</a>
         <a href="#basics">AI Basics</a>
-        <a href="#ml">Machine Learning</a>
-        <a href="#dl">Deep Learning</a>
-        <a href="#nlp">NLP</a>
+        <div class="dropdown">
+          <span class="dropdown-trigger">Topics <i data-lucide="chevron-down"
+              style="width: 14px; height: 14px; display: inline; vertical-align: middle;"></i></span>
+          <div class="dropdown-menu">
+            <a href="./ml-detail.html" class="dropdown-item"><i data-lucide="settings"></i> Machine Learning</a>
+            <a href="./dl-detail.html" class="dropdown-item"><i data-lucide="layers"></i> Deep Learning</a>
+            <a href="./nlp-detail.html" class="dropdown-item"><i data-lucide="message-square"></i> NLP</a>
+            <a href="./cv-detail.html" class="dropdown-item"><i data-lucide="eye"></i> Computer Vision</a>
+          </div>
+        </div>
         <a href="#roadmap">Roadmaps</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -47,7 +55,7 @@
   </header>
 
   <main>
-    <section id="home" class="hero section">
+    <section id="home" class="hero section" data-reveal>
       <div class="container hero-container">
         <div class="hero-content">
           <span class="badge">Master the Future</span>
@@ -61,14 +69,14 @@
         </div>
         <div class="hero-image">
           <div class="image-wrapper">
-            <img src="/hero.png" alt="AI Neural Network" id="hero-img">
+            <img src="./public/hero.png" alt="AI Neural Network" id="hero-img">
             <div class="glow-effect"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="basics" class="basics section">
+    <section id="basics" class="basics section" data-reveal>
       <div class="container section-container">
         <div class="section-header">
           <span class="section-tag">Foundation</span>
@@ -97,7 +105,7 @@
       </div>
     </section>
 
-    <section id="fields" class="fields section">
+    <section id="fields" class="fields section" data-reveal>
       <div class="container section-container">
         <div class="section-header text-center">
           <span class="section-tag">Key Domains</span>
@@ -109,31 +117,31 @@
             <div class="card-icon"><i data-lucide="settings"></i></div>
             <h3>Machine Learning</h3>
             <p>Algorithms that improve automatically through experience and data analysis.</p>
-            <a href="/ml-detail.html" class="card-link">Learn More <i data-lucide="arrow-right"></i></a>
+            <a href="./ml-detail.html" class="card-link">Learn More <i data-lucide="arrow-right"></i></a>
           </div>
           <div class="card" id="dl">
             <div class="card-icon"><i data-lucide="layers"></i></div>
             <h3>Deep Learning</h3>
             <p>Neural networks inspired by the human brain to solve complex patterns.</p>
-            <a href="/dl-detail.html" class="card-link">Learn More <i data-lucide="arrow-right"></i></a>
+            <a href="./dl-detail.html" class="card-link">Learn More <i data-lucide="arrow-right"></i></a>
           </div>
           <div class="card" id="nlp">
             <div class="card-icon"><i data-lucide="message-square"></i></div>
             <h3>NLP</h3>
             <p>Enabling computers to understand, interpret, and generate human language.</p>
-            <a href="/nlp-detail.html" class="card-link">Learn More <i data-lucide="arrow-right"></i></a>
+            <a href="./nlp-detail.html" class="card-link">Learn More <i data-lucide="arrow-right"></i></a>
           </div>
           <div class="card" id="cv">
             <div class="card-icon"><i data-lucide="eye"></i></div>
             <h3>Computer Vision</h3>
             <p>Giving machines the ability to gain high-level understanding from digital images.</p>
-            <a href="/cv-detail.html" class="card-link">Learn More <i data-lucide="arrow-right"></i></a>
+            <a href="./cv-detail.html" class="card-link">Learn More <i data-lucide="arrow-right"></i></a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="roadmap" class="roadmap section">
+    <section id="roadmap" class="roadmap section" data-reveal>
       <div class="container section-container">
         <div class="section-header text-center">
           <span class="section-tag">Curriculum</span>
@@ -173,7 +181,7 @@
       </div>
     </section>
 
-    <section id="contact-form" class="contact-section section">
+    <section id="contact-form" class="contact-section section" data-reveal>
       <div class="container section-container">
         <div class="section-header text-center">
           <span class="section-tag">Get in Touch</span>
@@ -225,32 +233,42 @@
         <div class="footer-brand">
           <span class="logo-text">AI Study Hub</span>
           <p>Advancing the world's intelligence through accessible education and structured learning resources.</p>
+          <div class="social-links" style="margin-top: var(--space-3); display: flex; gap: var(--space-2);">
+            <a href="#" aria-label="Github"><i data-lucide="github"></i></a>
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            <a href="#" aria-label="Discord"><i data-lucide="message-circle"></i></a>
+          </div>
         </div>
         <div class="footer-links">
-          <h4>Quick Links</h4>
-          <a href="#home">Home</a>
+          <h4>Explore</h4>
+          <a href="./ml-detail.html">Machine Learning</a>
+          <a href="./dl-detail.html">Deep Learning</a>
+          <a href="./nlp-detail.html">NLP</a>
+          <a href="./cv-detail.html">Computer Vision</a>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
           <a href="#basics">AI Basics</a>
           <a href="#roadmap">Roadmaps</a>
+          <a href="#">Glossary</a>
+          <a href="#">Cheat Sheets</a>
         </div>
         <div class="footer-links">
-          <h4>Community</h4>
-          <a href="#">Discord</a>
-          <a href="#">Github</a>
-          <a href="#">Newsletter</a>
-        </div>
-        <div class="footer-contact" id="contact">
           <h4>Support</h4>
-          <p>sandipanroy546@gmail.com</p>
+          <a href="#">About Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="mailto:sandipanroy546@gmail.com" id="contact">sandipanroy546@gmail.com</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>Developed by Sandipan Roy</p>
-        <p class="copyright">&copy; 2026 AI Study Hub. All rights reserved.</p>
+        <p>&copy; <span id="current-year">2026</span> AI Study Hub. Built for learners worldwide.</p>
+        <p class="copyright" style="margin-top: 8px;">Developed by Sandipan Roy</p>
       </div>
     </div>
   </footer>
 
-  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
