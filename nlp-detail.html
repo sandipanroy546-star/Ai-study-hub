@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <link rel="stylesheet" href="./src/style.css">
 </head>
 
@@ -98,6 +99,19 @@
                     </div>
                 </div>
 
+                <div class="info-group" data-reveal>
+                    <h2>Typical NLP Pipeline</h2>
+                    <div class="mermaid" style="text-align: center; margin-top: 20px;">
+                        graph TD
+                        T[Raw Text] --> C[Cleaning]
+                        C --> Tok[Tokenization]
+                        Tok --> V[Vectorization]
+                        V --> M[Model Processing]
+                        M --> O[Output/Prediction]
+                    </div>
+                </div>
+
+
                 <!-- 3. Real-World Examples -->
                 <div class="info-group" data-reveal>
                     <h2>3. Real-World Examples</h2>
@@ -169,6 +183,7 @@
     <script type="module">
         import './src/main.js';
         lucide.createIcons();
+        mermaid.initialize({ startOnLoad: true, theme: 'dark', securityLevel: 'loose' });
     </script>
 </body>
 

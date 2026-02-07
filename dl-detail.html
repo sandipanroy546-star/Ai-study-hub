@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <link rel="stylesheet" href="./src/style.css">
 </head>
 
@@ -98,6 +99,24 @@
                     </div>
                 </div>
 
+                <div class="info-group" data-reveal>
+                    <h2>Neural Network Architecture</h2>
+                    <div class="mermaid" style="text-align: center; margin-top: 20px;">
+                        graph LR
+                        I1((In 1)) --> H1((H1))
+                        I2((In 2)) --> H1
+                        I3((In 3)) --> H1
+                        I1 --> H2((H2))
+                        I2 --> H2
+                        I3 --> H2
+                        H1 --> O1((Out))
+                        H2 --> O1
+                    </div>
+                    <p style="text-align: center; color: var(--text-muted); margin-top: 10px;">A simple Feedforward
+                        Neural Network</p>
+                </div>
+
+
                 <!-- 3. Real-World Examples -->
                 <div class="info-group" data-reveal>
                     <h2>3. Real-World Examples</h2>
@@ -168,6 +187,7 @@
     <script type="module">
         import './src/main.js';
         lucide.createIcons();
+        mermaid.initialize({ startOnLoad: true, theme: 'dark', securityLevel: 'loose' });
     </script>
 </body>
 

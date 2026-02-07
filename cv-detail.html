@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <link rel="stylesheet" href="./src/style.css">
 </head>
 
@@ -96,61 +97,74 @@
                     </div>
                 </div>
 
-                <!-- 3. Real-World Examples -->
-                <div class="info-group" data-reveal>
-                    <h2>3. Real-World Examples</h2>
-                    <div class="info-grid">
-                        <div class="example-box">
-                            <h5>Facial ID</h5>
-                            <p>Smartphones use computer vision to map facial geometry and grant secure access in
-                                milliseconds.</p>
-                        </div>
-                        <div class="example-box">
-                            <h5>Medical Diagnosis</h5>
-                            <p>AI models scan X-rays and MRIs to detect anomalies like fractures or tumors with high
-                                precision.</p>
-                        </div>
-                        <div class="example-box">
-                            <h5>AR/VR</h5>
-                            <p>Augmented reality apps track the physical environment to overlay digital objects onto the
-                                real world.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. Industry Applications -->
-                <div class="info-group" data-reveal>
-                    <h2>4. Industry Applications</h2>
-                    <div class="info-grid">
-                        <div class="info-card">
-                            <i data-lucide="car-front" style="color: var(--accent); margin-bottom: 8px;"></i>
-                            <h4>Autonomous Driving</h4>
-                            <p>Real-time detection of lanes, traffic signs, and obstacles for safe navigation.</p>
-                        </div>
-                        <div class="info-card">
-                            <i data-lucide="package" style="color: var(--accent); margin-bottom: 8px;"></i>
-                            <h4>Robotics</h4>
-                            <p>Enabling robots to "see" and interact with objects in warehouses and manufacturing.</p>
-                        </div>
-                        <div class="info-card">
-                            <i data-lucide="shield-check" style="color: var(--accent); margin-bottom: 8px;"></i>
-                            <h4>Security</h4>
-                            <p>Automated surveillance and crowd monitoring for public safety and traffic management.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 5. Next Steps -->
-                <div class="next-steps" data-reveal>
-                    <h2>See the future of AI</h2>
-                    <p>Learn OpenCV and deep learning frameworks to build your own visual intelligence systems.</p>
-                    <div style="display: flex; gap: var(--space-2); justify-content: center;">
-                        <a href="./index.html#roadmap" class="btn btn-primary">CV Roadmap</a>
-                        <a href="#" class="btn btn-outline">Project Ideas</a>
-                    </div>
-                </div>
-
             </div>
+
+            <div class="info-group" data-reveal>
+                <h2>Convolutional Neural Network (CNN)</h2>
+                <div class="mermaid" style="text-align: center; margin-top: 20px;">
+                    graph LR
+                    Im[Input Image] --> C[Conv Layer]
+                    C --> P[Pool Layer]
+                    P --> C2[Conv Layer 2]
+                    C2 --> P2[Pool Layer 2]
+                    P2 --> FC[Fully Connected]
+                    FC --> Out[Class Probabilities]
+                </div>
+            </div>
+            <div class="info-group" data-reveal>
+                <h2>3. Real-World Examples</h2>
+                <div class="info-grid">
+                    <div class="example-box">
+                        <h5>Facial ID</h5>
+                        <p>Smartphones use computer vision to map facial geometry and grant secure access in
+                            milliseconds.</p>
+                    </div>
+                    <div class="example-box">
+                        <h5>Medical Diagnosis</h5>
+                        <p>AI models scan X-rays and MRIs to detect anomalies like fractures or tumors with high
+                            precision.</p>
+                    </div>
+                    <div class="example-box">
+                        <h5>AR/VR</h5>
+                        <p>Augmented reality apps track the physical environment to overlay digital objects onto the
+                            real world.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Industry Applications -->
+            <div class="info-group" data-reveal>
+                <h2>4. Industry Applications</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i data-lucide="car-front" style="color: var(--accent); margin-bottom: 8px;"></i>
+                        <h4>Autonomous Driving</h4>
+                        <p>Real-time detection of lanes, traffic signs, and obstacles for safe navigation.</p>
+                    </div>
+                    <div class="info-card">
+                        <i data-lucide="package" style="color: var(--accent); margin-bottom: 8px;"></i>
+                        <h4>Robotics</h4>
+                        <p>Enabling robots to "see" and interact with objects in warehouses and manufacturing.</p>
+                    </div>
+                    <div class="info-card">
+                        <i data-lucide="shield-check" style="color: var(--accent); margin-bottom: 8px;"></i>
+                        <h4>Security</h4>
+                        <p>Automated surveillance and crowd monitoring for public safety and traffic management.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Next Steps -->
+            <div class="next-steps" data-reveal>
+                <h2>See the future of AI</h2>
+                <p>Learn OpenCV and deep learning frameworks to build your own visual intelligence systems.</p>
+                <div style="display: flex; gap: var(--space-2); justify-content: center;">
+                    <a href="./index.html#roadmap" class="btn btn-primary">CV Roadmap</a>
+                    <a href="#" class="btn btn-outline">Project Ideas</a>
+                </div>
+            </div>
+
+        </div>
         </div>
     </main>
 
@@ -165,6 +179,7 @@
     <script type="module">
         import './src/main.js';
         lucide.createIcons();
+        mermaid.initialize({ startOnLoad: true, theme: 'dark', securityLevel: 'loose' });
     </script>
 </body>
 

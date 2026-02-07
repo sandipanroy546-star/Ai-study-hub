@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <link rel="stylesheet" href="./src/style.css">
 </head>
 
@@ -104,6 +105,16 @@
                             <strong>Testing</strong> (to verify). Overfitting occurs when a model learns noise too well,
                             while underfitting happens when it's too simple.
                         </p>
+                        <div class="mermaid" style="text-align: center; margin-top: 20px;">
+                            flowchart LR
+                            A[Input Data] --> B[Training Set]
+                            A --> C[Test Set]
+                            B --> D[Train Model]
+                            D --> E{Evaluate}
+                            C --> E
+                            E -->|Good| F[Deploy]
+                            E -->|Bad| D
+                        </div>
                     </div>
                 </div>
 
@@ -176,6 +187,7 @@
     <script type="module">
         import './src/main.js';
         lucide.createIcons();
+        mermaid.initialize({ startOnLoad: true, theme: 'dark', securityLevel: 'loose' });
     </script>
 </body>
 
