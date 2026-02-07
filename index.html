@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Study Hub | Master Artificial Intelligence</title>
+  <meta name="description"
+    content="Comprehensive educational platform for Artificial Intelligence, Machine Learning, and Deep Learning roadmaps and resources.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="dark-theme">
+  <header class="navbar">
+    <div class="container navbar-container">
+      <div class="logo">
+        <span class="logo-text">AI Study Hub</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#basics">AI Basics</a>
+        <a href="#ml">Machine Learning</a>
+        <a href="#dl">Deep Learning</a>
+        <a href="#nlp">NLP</a>
+        <a href="#roadmap">Roadmaps</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+          <i data-lucide="moon" class="dark-icon"></i>
+          <i data-lucide="sun" class="light-icon"></i>
+        </button>
+        <a href="#contact-form" class="btn btn-primary">Sign Up</a>
+        <button class="mobile-menu-btn" aria-label="Mobile Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="badge">Master the Future</span>
+          <h1>Artificial Intelligence <br><span class="gradient-text">for Everyone</span></h1>
+          <p>Dive deep into the world of AI. From foundational concepts to cutting-edge research, we provide structured
+            roadmaps and high-quality resources to fuel your learning journey.</p>
+          <div class="hero-btns">
+            <a href="#basics" class="btn btn-primary">Start Learning</a>
+            <a href="#roadmap" class="btn btn-outline">View Roadmap</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="image-wrapper">
+            <img src="/hero.png" alt="AI Neural Network" id="hero-img">
+            <div class="glow-effect"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="basics" class="basics section">
+      <div class="container section-container">
+        <div class="section-header">
+          <span class="section-tag">Foundation</span>
+          <h2>What is AI?</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="basics-grid">
+          <div class="basics-text">
+            <p>Artificial Intelligence (AI) is the simulation of human intelligence processes by machines, especially
+              computer systems. These processes include learning (the acquisition of information and rules for using the
+              information), reasoning (using rules to reach approximate or definite conclusions) and self-correction.
+            </p>
+            <ul class="check-list">
+              <li><i data-lucide="check-circle"></i> Problem Solving & Logic</li>
+              <li><i data-lucide="check-circle"></i> Knowledge Representation</li>
+              <li><i data-lucide="check-circle"></i> Automated Planning</li>
+              <li><i data-lucide="check-circle"></i> Learning & Perception</li>
+            </ul>
+          </div>
+          <div class="basics-card">
+            <div class="feature-icon"><i data-lucide="brain"></i></div>
+            <h3>Empowering Intelligence</h3>
+            <p>Understanding the core principles that drive modern algorithmic breakthroughs across every industry.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fields" class="fields section">
+      <div class="container section-container">
+        <div class="section-header text-center">
+          <span class="section-tag">Key Domains</span>
+          <h2>Explore Specialized Fields</h2>
+          <p>AI is a vast ecosystem of technologies. Focus on what interests you most.</p>
+        </div>
+        <div class="cards-grid">
+          <div class="card" id="ml">
+            <div class="card-icon"><i data-lucide="settings"></i></div>
+            <h3>Machine Learning</h3>
+            <p>Algorithms that improve automatically through experience and data analysis.</p>
+            <a href="/ml-detail.html" class="card-link">Learn More <i data-lucide="arrow-right"></i></a>
+          </div>
+          <div class="card" id="dl">
+            <div class="card-icon"><i data-lucide="layers"></i></div>
+            <h3>Deep Learning</h3>
+            <p>Neural networks inspired by the human brain to solve complex patterns.</p>
+            <a href="/dl-detail.html" class="card-link">Learn More <i data-lucide="arrow-right"></i></a>
+          </div>
+          <div class="card" id="nlp">
+            <div class="card-icon"><i data-lucide="message-square"></i></div>
+            <h3>NLP</h3>
+            <p>Enabling computers to understand, interpret, and generate human language.</p>
+            <a href="/nlp-detail.html" class="card-link">Learn More <i data-lucide="arrow-right"></i></a>
+          </div>
+          <div class="card" id="cv">
+            <div class="card-icon"><i data-lucide="eye"></i></div>
+            <h3>Computer Vision</h3>
+            <p>Giving machines the ability to gain high-level understanding from digital images.</p>
+            <a href="/cv-detail.html" class="card-link">Learn More <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="roadmap section">
+      <div class="container section-container">
+        <div class="section-header text-center">
+          <span class="section-tag">Curriculum</span>
+          <h2>Structured Learning Path</h2>
+          <p>A step-by-step guide from zero to AI expert.</p>
+        </div>
+        <div class="roadmap-timeline">
+          <div class="roadmap-item">
+            <div class="roadmap-count">01</div>
+            <div class="roadmap-content">
+              <h3>Fundamentals</h3>
+              <p>Python Programming, Mathematics (Linear Algebra, Calculus), and Statistics.</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-count">02</div>
+            <div class="roadmap-content">
+              <h3>Classical AI & ML</h3>
+              <p>Supervised/Unsupervised Learning, Regression, SVMs, and Decision Trees.</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-count">03</div>
+            <div class="roadmap-content">
+              <h3>Neural Networks</h3>
+              <p>Perceptrons, Backpropagation, CNNs, RNNs, and Model Evaluation.</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-count">04</div>
+            <div class="roadmap-content">
+              <h3>Advanced Topics</h3>
+              <p>Transformers, GANs, RLHF, and Deploying AI Systems in Production.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-form" class="contact-section section">
+      <div class="container section-container">
+        <div class="section-header text-center">
+          <span class="section-tag">Get in Touch</span>
+          <h2>Connect With Us</h2>
+          <p class="lead" style="margin-top: var(--space-2);">Want to learn more? Fill out the form below and our team
+            will get in touch with you soon.</p>
+        </div>
+        <div class="form-wrapper">
+          <!-- Professional Mock Form for User to connect their Google Form -->
+          <form class="contact-form-ui card">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="number">Phone Number</label>
+              <input type="tel" id="number" placeholder="+1 (555) 000-0000" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--space-2);">Submit
+              Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" class="tools section">
+      <div class="container section-container">
+        <div class="section-header text-center">
+          <span class="section-tag">Tech Stack</span>
+          <h2>Industry Standards</h2>
+        </div>
+        <div class="tools-grid">
+          <div class="tool-item">Python</div>
+          <div class="tool-item">TensorFlow</div>
+          <div class="tool-item">PyTorch</div>
+          <div class="tool-item">Scikit-Learn</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-text">AI Study Hub</span>
+          <p>Advancing the world's intelligence through accessible education and structured learning resources.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#basics">AI Basics</a>
+          <a href="#roadmap">Roadmaps</a>
+        </div>
+        <div class="footer-links">
+          <h4>Community</h4>
+          <a href="#">Discord</a>
+          <a href="#">Github</a>
+          <a href="#">Newsletter</a>
+        </div>
+        <div class="footer-contact" id="contact">
+          <h4>Support</h4>
+          <p>sandipanroy546@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Developed by Sandipan Roy</p>
+        <p class="copyright">&copy; 2026 AI Study Hub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

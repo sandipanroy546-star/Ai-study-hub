@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deep Learning Deep Dive | AI Study Hub</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="dark-theme">
+    <header class="navbar">
+        <div class="container navbar-container">
+            <div class="logo">
+                <a href="/" class="logo-text">AI Study Hub</a>
+            </div>
+            <nav class="nav-links">
+                <a href="/index.html#home">Home</a>
+                <a href="/index.html#basics">AI Basics</a>
+                <a href="/index.html#ml">Machine Learning</a>
+                <a href="/index.html#dl" class="active">Deep Learning</a>
+                <a href="/index.html#nlp">NLP</a>
+                <a href="/index.html#roadmap">Roadmaps</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="/index.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 14px;">Back to
+                    Home</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <div class="detail-header">
+                <span class="badge">Advanced AI</span>
+                <h1>Deep Learning <span class="gradient-text">Exploration</span></h1>
+                <p class="lead">Understanding neural networks and the architectures that power modern AI.</p>
+            </div>
+
+            <div class="detail-content">
+                <!-- What is DL -->
+                <div class="info-group">
+                    <h2>What is Deep Learning?</h2>
+                    <ul class="detail-list">
+                        <li><i data-lucide="check-circle"></i> Subset of Machine Learning</li>
+                        <li><i data-lucide="check-circle"></i> Inspired by the human brain structure</li>
+                        <li><i data-lucide="check-circle"></i> Uses artificial neural networks with multiple layers</li>
+                        <li><i data-lucide="check-circle"></i> Automatically learns complex patterns from large datasets
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Relationship -->
+                <div class="info-group">
+                    <div class="info-card" style="border-left: 4px solid var(--accent);">
+                        <h3>Relationship: AI vs ML vs DL</h3>
+                        <p>Artificial Intelligence is the broad concept, while Machine Learning is a subset of AI. Deep
+                            Learning is a specialized subset of ML best suited for high-dimensional, complex data.</p>
+                    </div>
+                </div>
+
+                <!-- Neural Networks -->
+                <div class="info-group">
+                    <h2>Artificial Neural Networks (ANN)</h2>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>Core Foundations</h3>
+                            <ul class="detail-list">
+                                <li>Computational model inspired by biological neurons</li>
+                                <li>Consists of neurons, weights, and activation functions</li>
+                                <li>Learns by adjusting weights during training</li>
+                            </ul>
+                        </div>
+                        <div class="info-card">
+                            <h3>Architecture Structure</h3>
+                            <ul class="detail-list">
+                                <li><strong>Input Layer:</strong> Receives raw data</li>
+                                <li><strong>Hidden Layers:</strong> Process information (Multiple layers make it "Deep")
+                                </li>
+                                <li><strong>Output Layer:</strong> Produces final results</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training & Optimization -->
+                <div class="info-group">
+                    <h2>Optimization & Learning</h2>
+                    <div class="concepts-grid">
+                        <div class="card mini-card">
+                            <h4>Activation Functions</h4>
+                            <p>ReLU (Zero for negative, identity for positive), Sigmoid, and Softmax. Critical for
+                                non-linearity.</p>
+                        </div>
+                        <div class="card mini-card">
+                            <h4>Loss Function</h4>
+                            <p>Measures prediction error. Guided by Mean Squared Error or Cross Entropy.</p>
+                        </div>
+                        <div class="card mini-card">
+                            <h4>Backpropagation</h4>
+                            <p>Calculates error gradients and updates weights via Gradient Descent.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modern Architectures -->
+                <div class="info-group">
+                    <h2>Specialized Architectures</h2>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>CNN (Convolutional)</h3>
+                            <p>Specialized for image/spatial data. Uses convolution and pooling layers for computer
+                                vision.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>RNN & LSTM</h3>
+                            <p>Designed for sequential data (text, time-series). LSTMs handle long-term dependencies
+                                using gates.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Concepts -->
+                <div class="info-group">
+                    <h2>Advanced Concepts</h2>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h4>Optimization Terms</h4>
+                            <ul class="detail-list">
+                                <li><strong>Epoch:</strong> One complete pass through the dataset</li>
+                                <li><strong>Batch Size:</strong> Number of samples processed at once</li>
+                                <li><strong>Transfer Learning:</strong> Using pre-trained models to save time</li>
+                            </ul>
+                        </div>
+                        <div class="info-card">
+                            <h4>Regularization</h4>
+                            <ul class="detail-list">
+                                <li><strong>Dropout:</strong> Randomly disables neurons to prevent overfitting</li>
+                                <li><strong>Data Requirements:</strong> Requires massive datasets for optimal
+                                    performance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Applications -->
+                <div class="info-group">
+                    <h2>Tools & Impact</h2>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>Frameworks</h3>
+                            <p>TensorFlow, PyTorch, Keras, MXNet.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Key Applications</h3>
+                            <p>Face perception, Speech recognition, NLP, Autonomous vehicles, Medical imaging.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summary -->
+                <div class="info-group">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>Advantages</h3>
+                            <p>Automatic feature extraction, high accuracy, and excellent scalability with large data.
+                            </p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Limitations</h3>
+                            <p>High compute power needed, black-box nature (difficult to interpret), and dependency on
+                                labeled data.</p>
+                        </div>
+                    </div>
+                    <div class="info-card"
+                        style="margin-top: 2rem; border-color: var(--accent); background: var(--bg-tertiary);">
+                        <h3>Future Scope</h3>
+                        <p>Growing demand across AI-driven industries. Essential technology for advanced robotics and
+                            next-gen automation systems.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>Developed by Sandipan Roy</p>
+            <p class="copyright">&copy; 2026 AI Study Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module">
+        import '/src/main.js';
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

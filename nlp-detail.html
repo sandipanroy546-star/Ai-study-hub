@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NLP Deep Dive | AI Study Hub</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="dark-theme">
+    <header class="navbar">
+        <div class="container navbar-container">
+            <div class="logo">
+                <a href="/" class="logo-text">AI Study Hub</a>
+            </div>
+            <nav class="nav-links">
+                <a href="/index.html#home">Home</a>
+                <a href="/index.html#basics">AI Basics</a>
+                <a href="/index.html#ml">Machine Learning</a>
+                <a href="/index.html#dl">Deep Learning</a>
+                <a href="/index.html#nlp" class="active">NLP</a>
+                <a href="/index.html#roadmap">Roadmaps</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="/index.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 14px;">Back to
+                    Home</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <div class="detail-header">
+                <span class="badge">Language AI</span>
+                <h1>Natural Language <span class="gradient-text">Processing</span></h1>
+                <p class="lead">Bridging the gap between human communication and computer understanding.</p>
+            </div>
+
+            <div class="detail-content">
+                <!-- What is NLP -->
+                <div class="info-group">
+                    <h2>What is NLP?</h2>
+                    <ul class="detail-list">
+                        <li><i data-lucide="check-circle"></i> Subfield of Artificial Intelligence</li>
+                        <li><i data-lucide="check-circle"></i> Enables machines to understand human language</li>
+                        <li><i data-lucide="check-circle"></i> Works with text and speech data</li>
+                        <li><i data-lucide="check-circle"></i> Combines linguistics, machine learning and deep learning
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Components -->
+                <div class="info-group">
+                    <h2>Core Components</h2>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>NLU (Understanding)</h3>
+                            <p>Interprets meaning from text, identifies intent and context, and handles language
+                                ambiguity.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>NLG (Generation)</h3>
+                            <p>Produces meaningful text, converts structured data into language, used in chatbots and
+                                reporting.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Preprocessing -->
+                <div class="info-group">
+                    <h2>Text Preprocessing Techniques</h2>
+                    <div class="concepts-grid">
+                        <div class="card mini-card">
+                            <h4>Tokenization</h4>
+                            <p>Splits text into words/sentences as the first step in NLP pipelines.</p>
+                        </div>
+                        <div class="card mini-card">
+                            <h4>Stop Words</h4>
+                            <p>Removing common words like "is", "the", "and" to reduce noise.</p>
+                        </div>
+                        <div class="card mini-card">
+                            <h4>Stemming</h4>
+                            <p>Fast but less accurate reduction of words to root forms.</p>
+                        </div>
+                        <div class="card mini-card">
+                            <h4>Lemmatization</h4>
+                            <p>Accurate conversion to dictionary base forms using grammar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Representation -->
+                <div class="info-group">
+                    <h2>Text Representation & Math</h2>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>Traditional Methods</h3>
+                            <ul class="detail-list">
+                                <li><strong>Bag of Words:</strong> Statistical frequency vectors.</li>
+                                <li><strong>TF-IDF:</strong> Measures word importance vs. irrelevance.</li>
+                            </ul>
+                        </div>
+                        <div class="info-card">
+                            <h3>Modern Embeddings</h3>
+                            <ul class="detail-list">
+                                <li><strong>Word2Vec:</strong> Capture semantic meaning as dense vectors.</li>
+                                <li><strong>GloVe:</strong> Global vectors for word representation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Architecture -->
+                <div class="info-group">
+                    <h2>The Transformer Revolution</h2>
+                    <div class="info-card"
+                        style="border-left: 4px solid var(--accent); background: var(--bg-tertiary);">
+                        <h3>Transformer Architecture & Attention</h3>
+                        <p>Modern NLP is built on <strong>Transformers</strong> which use <strong>Attention
+                                Mechanisms</strong> to focus on important words in parallel, handling long-range
+                            dependencies far better than older RNNs.</p>
+                    </div>
+                </div>
+
+                <!-- Tasks -->
+                <div class="info-group">
+                    <h2>Common NLP Tasks</h2>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>Sentiment Analysis</h3>
+                            <p>Identifies emotional tone (Positive, Negative, Neutral) in reviews and social media.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>NER & Recognition</h3>
+                            <p>Identifies names, locations, and organizations to extract structured info from text.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Chatbots & Agents</h3>
+                            <p>Enable conversational interfaces that generate human-like responses to queries.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Applications -->
+                <div class="info-group">
+                    <h2>Ecosystem & Impact</h2>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>Libraries & Tools</h3>
+                            <p>NLTK, SpaCy, Hugging Face Transformers, Gensim.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Applications</h3>
+                            <p>Search engines, Virtual assistants (Siri/Alexa), Spam filtering, Machine translation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Future & Challenges -->
+                <div class="info-group">
+                    <div class="info-grid">
+                        <div class="info-card border-accent">
+                            <h3>The Challenges</h3>
+                            <p>Handling sarcasm, deep context understanding, multilingual processing, and language
+                                ambiguity.</p>
+                        </div>
+                        <div class="info-card" style="background: var(--gradient); color: white;">
+                            <h3>Future Scope</h3>
+                            <p style="color: white; font-weight: 500;">Next-gen conversational AI, seamless multilingual
+                                systems, and revolutionary human–machine interaction.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>Developed by Sandipan Roy</p>
+            <p class="copyright">&copy; 2026 AI Study Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module">
+        import '/src/main.js';
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

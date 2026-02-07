@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computer Vision Deep Dive | AI Study Hub</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="dark-theme">
+    <header class="navbar">
+        <div class="container navbar-container">
+            <div class="logo">
+                <a href="/" class="logo-text">AI Study Hub</a>
+            </div>
+            <nav class="nav-links">
+                <a href="/index.html#home">Home</a>
+                <a href="/index.html#basics">AI Basics</a>
+                <a href="/index.html#ml">Machine Learning</a>
+                <a href="/index.html#dl">Deep Learning</a>
+                <a href="/index.html#nlp">NLP</a>
+                <a href="/index.html#cv" class="active">Computer Vision</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="/index.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 14px;">Back to
+                    Home</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <div class="detail-header">
+                <span class="badge">Visual AI</span>
+                <h1>Computer <span class="gradient-text">Vision</span></h1>
+                <p class="lead">Empowering machines with the ability to see, interpret, and understand the visual world.
+                </p>
+            </div>
+
+            <div class="detail-content">
+                <!-- What is CV -->
+                <div class="info-group">
+                    <h2>What is Computer Vision?</h2>
+                    <ul class="detail-list">
+                        <li><i data-lucide="check-circle"></i> Subfield of Artificial Intelligence</li>
+                        <li><i data-lucide="check-circle"></i> Enables machines to understand and interpret visual data
+                        </li>
+                        <li><i data-lucide="check-circle"></i> Works with images and videos</li>
+                        <li><i data-lucide="check-circle"></i> Mimics human visual perception</li>
+                    </ul>
+                </div>
+
+                <!-- Digital Image & Representation -->
+                <div class="info-group">
+                    <h2>Image Representation & Data</h2>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>Digital Image Structure</h3>
+                            <p>Composed of <strong>pixels</strong> arranged in rows and columns. Each pixel stores
+                                brightness information, and resolution directly affects clarity.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Matrix Representation</h3>
+                            <p>Images are represented as <strong>matrices</strong>. Color images typically use three
+                                channels (RGB) for red, green, and blue intensity values.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preprocessing -->
+                <div class="info-group">
+                    <h2>Preprocessing & Feature Extraction</h2>
+                    <div class="concepts-grid">
+                        <div class="card mini-card">
+                            <h4>Preprocessing</h4>
+                            <p>Resizing, normalization, and noise reduction to improve data quality for vision models.
+                            </p>
+                        </div>
+                        <div class="card mini-card">
+                            <h4>Edge Detection</h4>
+                            <p>Identifying object boundaries by highlighting sudden intensity changes.</p>
+                        </div>
+                        <div class="card mini-card">
+                            <h4>Segmentation</h4>
+                            <p>Dividing images into meaningful regions to separate objects from the background.</p>
+                        </div>
+                        <div class="card mini-card">
+                            <h4>Extraction</h4>
+                            <p>Traditional methods like SIFT, SURF, and HOG used to identify important patterns.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deep Learning in CV -->
+                <div class="info-group">
+                    <h2>The Power of CNNs</h2>
+                    <div class="info-card"
+                        style="border-left: 4px solid var(--accent); background: var(--bg-tertiary);">
+                        <h3>Convolutional Neural Networks</h3>
+                        <p>Specialized deep learning models that automatically extract hierarchical features using
+                            <strong>Convolution Layers</strong> (for edges and patterns) and <strong>Pooling
+                                Layers</strong> (to reduce dimensionality).</p>
+                    </div>
+                </div>
+
+                <!-- Tasks -->
+                <div class="info-group">
+                    <h2>Primary Computer Vision Tasks</h2>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>Object Detection</h3>
+                            <p>Identifying and locating multiple objects within an image. Essential for surveillance and
+                                self-driving cars.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Image Classification</h3>
+                            <p>Assigning a single label to an entire image (e.g., determining if a medical scan shows a
+                                tumor).</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Face & Character Recognition</h3>
+                            <p>Biometric security (FaceRec) and converting images of text into editable data (OCR).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video & Tools -->
+                <div class="info-group">
+                    <h2>Ecosystem & Video Analysis</h2>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>Video Analysis</h3>
+                            <p>Processing sequences of images to detect motion, behavior, and activity in real-time.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Libraries & Frameworks</h3>
+                            <p>OpenCV, TensorFlow, PyTorch, and Detectron.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Future & Applications -->
+                <div class="info-group">
+                    <h2>Impact & Future Scope</h2>
+                    <div class="info-grid">
+                        <div class="info-card border-accent">
+                            <h3>Real-world Impact</h3>
+                            <p>Autonomous vehicles, medical imaging, industrial inspection, and advanced surveillance
+                                systems.</p>
+                        </div>
+                        <div class="info-card" style="background: var(--gradient); color: white;">
+                            <h3>Future Vision</h3>
+                            <p style="color: white; font-weight: 500;">Next-gen real-time vision systems, revolutionary
+                                robotics, and high-adoption AI-powered imaging across sectors.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>Developed by Sandipan Roy</p>
+            <p class="copyright">&copy; 2026 AI Study Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module">
+        import '/src/main.js';
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
